@@ -130,18 +130,29 @@
         }
 
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            const pass = document.getElementById('password').value;
-            const confirm = document.getElementById('confirm-password').value;
-            
-            if (pass !== confirm) {
-                e.preventDefault();
-                const confirmInput = document.getElementById('confirm-password');
-                confirmInput.classList.add('border-red-500', 'ring-red-100', 'ring-4');
-                setTimeout(() => {
-                    confirmInput.classList.remove('border-red-500', 'ring-red-100', 'ring-4');
-                }, 3000);
-            }
-        });
+
+    e.preventDefault(); // stop default form submit
+
+    const pass = document.getElementById('password').value;
+    const confirm = document.getElementById('confirm-password').value;
+
+    if (pass !== confirm) {
+
+        const confirmInput = document.getElementById('confirm-password');
+
+        confirmInput.classList.add('border-red-500','ring-red-100','ring-4');
+
+        setTimeout(() => {
+            confirmInput.classList.remove('border-red-500','ring-red-100','ring-4');
+        },3000);
+
+        return;
+    }
+
+    // success redirect
+    window.location.href = "dashboard.html";
+
+});
     </script>
 </body>
 </html>
