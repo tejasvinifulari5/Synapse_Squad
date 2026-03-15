@@ -1,0 +1,2 @@
+        body { font-family: 'Inter', sans-serif; }
+        .input-group:focus-within label { color: #4f46e5; }
