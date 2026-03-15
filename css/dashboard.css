@@ -1,0 +1,23 @@
+        body { font-family: 'Inter', sans-serif; }
+        
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        .platform-card:has(input[name="platform"]:checked) {
+            border-color: #4f46e5;
+            background-color: #f5f3ff;
+            box-shadow: 0 0 0 1px #4f46e5;
+        }
+        
+        .sub-option:checked + label {
+            color: #4f46e5;
+            font-weight: 600;
+            background-color: #eef2ff;
+        }
+
+        /* Ensure the main container fills the full screen height */
+        .full-screen-height {
+            height: 100vh;
+        }
