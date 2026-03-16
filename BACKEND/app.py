@@ -1,3 +1,10 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath("../ai-content-generator"))
+
+from generator import generate_content
+
 from flask import Flask, render_template, request, redirect, session
 import firebase_config
 from firebase_admin import auth, db
@@ -70,17 +77,25 @@ def login():
     return render_template("login.html",error=error)
 
 # Protected Dashboard
-@app.route("/dashboard")
+@app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     if "user" not in session:
         return redirect("/login")
-    return render_template("dashboard.html")
 
-# Logout Route
-@app.route("/logout")
-def logout():
-    session.pop("user", None)
-    return redirect("/")
+    if request.method == "POST":
+        topic = request.form["topic"]
+        description = request.form["description"]
+
+        posts = generate_content(topic, description)
+
+        return render_template(
+            "dashboard.html",
+            linkedin_post=posts["linkedin"],
+            instagram_post=posts["instagram"],
+            twitter_post=posts["twitter"]
+        )
+
+    return render_template("dashboard.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
