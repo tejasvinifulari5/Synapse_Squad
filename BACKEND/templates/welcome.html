@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SocialLaunch.AI | Professional Product Launch Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/welcome.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  </head>
+  <body class="bg-white text-slate-900">
+    <!-- Navigation -->
+    <nav class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-7 h-7 bg-slate-900 rounded flex items-center justify-center text-white font-bold text-xs"
+        >
+          SL
+        </div>
+        <span class="font-bold tracking-tight">SocialLaunch.AI</span>
+      </div>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="/login" class="text-slate-500 hover:text-slate-900">Login</a>
+        <a
+          href="/register"
+          class="bg-slate-900 text-white px-4 py-2 rounded font-semibold hover:bg-slate-800 transition-all"
+        >
+          Get Started
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-5xl mx-auto px-6 pt-20 pb-20 text-center">
+      <p
+        class="text-sm text-indigo-600 font-semibold mb-4 uppercase tracking-widest"
+      >
+        AI Content Generator
+      </p>
+      <h1
+        class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight max-w-4xl mx-auto"
+      >
+        Turn your product specs into
+        <span class="text-indigo-600">launch campaigns.</span>
+      </h1>
+      <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto">
+        Generate professional, narrative-driven launch content for LinkedIn, X,
+        and Instagram directly from your feature descriptions.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <a
+          href="/register"
+          class="px-8 py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 inline-block"
+        >
+          Create Campaign
+        </a>
+        <button
+          class="px-8 py-4 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg hover:bg-slate-50 transition-all"
+        >
+          How it works
+        </button>
+      </div>
+
+      <!-- Visual Element: Dashboard Preview -->
+      <div class="relative max-w-4xl mx-auto">
+        <div
+          class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-10"
+        ></div>
+        <div
+          class="relative bg-slate-50 border border-slate-200 rounded-2xl shadow-2xl overflow-hidden aspect-video flex flex-col"
+        >
+          <div
+            class="h-8 bg-slate-200/50 border-b border-slate-200 flex items-center px-4 gap-1.5"
+          >
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-slate-300"></div>
+          </div>
+          <div
+            class="flex-grow flex items-center justify-center text-slate-400 font-medium"
+          >
+            <div class="text-center">
+              <svg
+                class="w-12 h-12 mx-auto mb-3 opacity-20"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path>
+              </svg>
+              [ Dashboard Preview: Interface for multi-channel content
+              generation ]
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- How It Works Section -->
+    <section class="max-w-5xl mx-auto px-6 py-24 border-t border-slate-100">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">How it works</h2>
+        <p class="text-slate-500">
+          Go from feature spec to multi-channel launch in three steps.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6"
+          >
+            1
+          </div>
+          <h3 class="font-bold text-lg mb-2">Enter Feature Details</h3>
+          <p class="text-sm text-slate-600">
+            Paste your PRD, feature list, or a simple description of what you're
+            building.
+          </p>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6"
+          >
+            2
+          </div>
+          <h3 class="font-bold text-lg mb-2">AI Generates Content</h3>
+          <p class="text-sm text-slate-600">
+            Our engine crafts specific narratives for LinkedIn, X, and Instagram
+            simultaneously.
+          </p>
+        </div>
+        <div class="text-center">
+          <div
+            class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-6"
+          >
+            3
+          </div>
+          <h3 class="font-bold text-lg mb-2">Publish & Scale</h3>
+          <p class="text-sm text-slate-600">
+            Review, copy, and publish your high-fidelity launch assets across
+            all social platforms.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-Channel Preview Section -->
+    <section class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-100">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+          <div
+            class="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-4"
+          >
+            LinkedIn
+          </div>
+          <h3 class="font-bold text-lg mb-3">Authority Building</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Long-form narratives that position your product as an industry
+            leader to professionals.
+          </p>
+        </div>
+        <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+          <div
+            class="text-xs font-bold text-sky-500 uppercase tracking-widest mb-4"
+          >
+            X / Twitter
+          </div>
+          <h3 class="font-bold text-lg mb-3">High-Engagement</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Sharp, concise hooks and technical threads designed for maximum
+            shareability.
+          </p>
+        </div>
+        <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100">
+          <div
+            class="text-xs font-bold text-pink-500 uppercase tracking-widest mb-4"
+          >
+            Instagram
+          </div>
+          <h3 class="font-bold text-lg mb-3">Visual Narrative</h3>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Punchy captions and carousel outlines optimized for modern mobile
+            attention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-100 flex justify-between items-center"
+    >
+      <div class="flex items-center gap-2 grayscale opacity-50">
+        <div
+          class="w-5 h-5 bg-slate-900 rounded flex items-center justify-center text-white font-bold text-[8px]"
+        >
+          SL
+        </div>
+        <span class="text-xs font-bold">SocialLaunch.AI</span>
+      </div>
+      <span class="text-slate-400 text-xs font-medium"
+        >© 2026 SocialLaunch.AI</span
+      >
+    </footer>
+  </body>
+</html>
